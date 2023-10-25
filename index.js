@@ -7,6 +7,10 @@ app.use(bodyParser.json());
 
 const commentsByPostId = {};
 
+app.get('/', (req, res)=>{
+    res.send("Hello Comments!")
+})
+
 app.get('/posts/:id/comments', (req, res)=>{
     res.send(commentsByPostId[req.params.id] || []);
 });

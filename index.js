@@ -31,5 +31,5 @@ app.post('/posts/:id/comments', (req, res)=>{
 });
 
 app.listen(4001, ()=>{
-    console.log('Listening on 4001');
+    console.log('Comments Service on 4001');
 });

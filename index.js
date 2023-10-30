@@ -43,7 +43,7 @@ app.post('/posts/:id/comments', async (req, res)=>{
 
 // Event Handler
 app.post('/events', (req, res)=>{
-    console.log('Received Event', req.body);
+    console.log('Received Event', req.body.type);
 });
 
 app.listen(4001, ()=>{

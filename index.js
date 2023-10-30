@@ -41,7 +41,6 @@ app.post('/posts/:id/comments', async (req, res)=>{
     res.status(201).send(comments);
 });
 
-// Event Handler
 app.post('/events', (req, res)=>{
     console.log('Received Event', req.body.type);
 });

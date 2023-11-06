@@ -28,7 +28,6 @@ app.post('/posts/:id/comments', async (req, res)=>{
     
     commentsByPostId[req.params.id] = comments;
 
-    // Events to Emit
     await axios.post('http://localhost:4005/events', {
         type: 'CommentCreated',
         data: {
@@ -49,7 +48,6 @@ app.post('/events', async (req, res)=>{
 
     if(type === 'CommentModerated'){
         const  {postId, id, status, content} = data;
-
         const comments = commentsByPostId[postId];
         
         const comment = comments.find(comment => {
